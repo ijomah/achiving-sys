@@ -1,0 +1,36 @@
+<!-- <mat-form-field>
+    <mat-label>Input</mat-label>
+    <input matInput type="file">
+    <button mat-raised-button color="primary">Primary</button>
+  </mat-form-field> -->
+
+ 
+  <form [formGroup]?="folderForm" (ngSubmit)="uploadFolder()">
+    <mat-form-field>
+      <mat-label>Folder Name</mat-label>
+      <input matInput formControlName="folderName" required>
+      <mat-error *ngIf="folderName?.invalid && (folderName?.dirty || folderName?.touched)">
+        Please enter a folder name.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Upload Folder</mat-label>
+      <input type="file" matInput formControlName="folderUpload" (change)="handleFileInput($event)" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+      <mat-error *ngIf="folderUpload?.invalid && (folderUpload?.dirty || folderUpload?.touched)">
+        Please select a folder to upload.
+      </mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="folderForm.invalid">
+      Upload Folder
+    </button>
+  </form>
+
+
+  <!-- <form [formGroup]="folderUploadForm">
+    <mat-form-field>
+      <mat-label>Select Folder</mat-label>
+      <input type="file" (change)="onFolderSelect($event)" multiple directory formControlName="folderControl">
+    </mat-form-field>
+  </form> -->
