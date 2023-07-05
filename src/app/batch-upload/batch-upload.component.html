@@ -1,11 +1,11 @@
-<!-- <mat-form-field>
+  <!-- <mat-form-field>
     <mat-label>Input</mat-label>
     <input matInput type="file">
     <button mat-raised-button color="primary">Primary</button>
   </mat-form-field> -->
 
  
-  <form [formGroup]?="folderForm" (ngSubmit)="uploadFolder()">
+  <!-- <form [formGroup]?="folderForm" (ngSubmit)="uploadFolder()">
     <mat-form-field>
       <mat-label>Folder Name</mat-label>
       <input matInput formControlName="folderName" required>
@@ -25,7 +25,7 @@
     <button mat-raised-button color="primary" type="submit" [disabled]="folderForm.invalid">
       Upload Folder
     </button>
-  </form>
+  </form> -->
 
 
   <!-- <form [formGroup]="folderUploadForm">
@@ -34,3 +34,35 @@
       <input type="file" (change)="onFolderSelect($event)" multiple directory formControlName="folderControl">
     </mat-form-field>
   </form> -->
+
+ 
+ <div>We are fine</div>
+ 
+  <!-- <div>
+        <input type="file" class="file-input"
+          [accept]="requiredFileType"
+          (change)="onFileSelected($event)" #fileUpload>
+
+    <div class="file-upload">
+
+      {{fileName || "No file uploaded yet."}}
+
+        <button mat-mini-fab color="primary" class="upload-btn"
+          (click)="fileUpload.click()">
+            <mat-icon>attach_file</mat-icon>
+
+        </button>
+
+    </div>
+
+    <div class="progress">
+
+      <mat-progress-bar class="progress-bar" mode="determinate"
+                        [value]="uploadProgress" *ngIf="uploadProgress">
+      </mat-progress-bar>
+
+      <mat-icon class="cancel-upload" (click)="cancelUpload()" 
+                *ngIf="uploadProgress">delete_forever</mat-icon>
+
+    </div>
+  </div> -->

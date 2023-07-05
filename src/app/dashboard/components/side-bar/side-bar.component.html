@@ -1,19 +1,25 @@
-<mat-drawer-container class="example-container" autosize>
-    <mat-drawer #drawer class="example-sidenav" mode="side">
+  <mat-drawer-container class="app-container">
+    <mat-drawer #drawer class="app-sidenav">
       <p>Auto-resizing sidenav</p>
       <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+      <a routerLink="/dash/app-batch-upload">Bulk Upload</a>
       <button (click)="showFiller = !showFiller" mat-raised-button>
         Toggle extra text
       </button>
     </mat-drawer>
   
-    <div class="example-sidenav-content">
-      <button type="button" mat-button (click)="drawer.toggle()">
-        Toggle sidenav
-      </button>
+    <div class="app-sidenav-content">
+      <!-- Absence of network, prevents the icon from
+      rendering. Instead a 'menu' is displayed. This distorts the ui.
+      In order to prevent this, use ngif directive to check network availability
+      before rendering. -->
+      <div class="btn-toggle-case">
+        <button type="button" mat-icon-button mat-button (click)="drawer.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+      <app-nav class="app-nav"></app-nav>
     </div>
-    <app-nav></app-nav>
-    <router-outlet></router-outlet>
-    
+  <router-outlet></router-outlet>
   </mat-drawer-container>
   

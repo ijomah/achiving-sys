@@ -16,7 +16,8 @@ export interface Todo {
   styleUrls: ['./todo.component.css']
 })
 export class TodoComponent implements OnInit {
-
+  cdkDropListData: any
+  cdkDropListConnectedTo: any
  value = '';
 // public todo: Todo[] = [
   todo: Todo[] = [

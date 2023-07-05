@@ -1,0 +1,19 @@
+.file-upload-page {
+    position: relative;
+    top: 20%;
+    left: 20%;
+    width: 60%;
+    height: 40%;
+    border: 2px dashed gray;
+}
+
+.file-input {
+    display: none;
+}
+
+.file-upload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15% auto;
+}

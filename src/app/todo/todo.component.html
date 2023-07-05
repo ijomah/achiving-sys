@@ -1,4 +1,5 @@
 <div class="container">
+  <a routerLink="/dash" >hi</a>
     <h1>Todo List!</h1>
     <form class="example-form">
         <mat-form-field class="example-form-field">
@@ -19,7 +20,7 @@
           [cdkDropListConnectedTo]="secondList" 
           #firstList="cdkDropList"
           (cdkDropListDropped)="drop($event, 'todo')"> -->
-          <mat-selection-list cdkDropList 
+          <!-- <mat-selection-list cdkDropList 
           [cdkDropListData]="todo" 
           [cdkDropListConnectedTo]="secondList" 
           #firstList="cdkDropList"
@@ -28,14 +29,14 @@
               {{ task.title }}
               <mat-divider></mat-divider>
             </mat-list-option>
-        </mat-selection-list>
+        </mat-selection-list> -->
         <h3 *ngIf="done.length > 0">Done</h3>
         <!-- <mat-list cdkDropList 
           [cdkDropListData]="done" 
           [cdkDropListConnectedTo]="firstList" 
           #secondList="cdkDropList"
           (cdkDropListDropped)="drop($event, 'done')"> -->
-          <mat-list cdkDropList 
+          <!-- <mat-list cdkDropList 
           [cdkDropListData]="done" 
           [cdkDropListConnectedTo]="firstList" 
           #secondList="cdkDropList"
@@ -45,6 +46,6 @@
               <s style="color: grey;">{{ task.title }}</s>              
               <mat-divider></mat-divider>
             </mat-list-item>
-        </mat-list>   
+        </mat-list>    -->
     </div>  
   </div>
