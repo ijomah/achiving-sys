@@ -2,6 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.1.
 
+It is a solution for archiving files and folders for clients. This is the desktop version of the whole system.
+
+The solution is made up a moile app, desktop app, an api and sql database to interact with.
+
+For this dessktop version, we are building it with Angular and Electron.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
